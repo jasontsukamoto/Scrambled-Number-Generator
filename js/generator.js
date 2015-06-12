@@ -1,5 +1,5 @@
 function generate(number) {
-  if(typeof number !== 'number') return false;
+  if (typeof number !== 'number') return false;
 
   var array = [];
   var randomArray = [];
@@ -9,15 +9,14 @@ function generate(number) {
   }
 
   var length = array.length;
-  for(var k = 0; k < length; k++){
+  for (var k = 0; k < length; k++) {
     var index = (Math.floor((Math.random() * array.length)));
     randomArray.push(array[index]);
-    array.splice(index,1);
+    array.splice(index, 1);
   }
   return randomArray;
- }
-
+}
 
 module.exports = {
   generate : generate
-}
+};
