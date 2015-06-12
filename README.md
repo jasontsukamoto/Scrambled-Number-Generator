@@ -27,8 +27,17 @@ returns:
 
 File structure:
   - Scrambled-Number-Generator
-    - generator.js
-    - spec/generator-spec.js
+    -js
+        - challenge-solution.js
+        - test-spec.js
+    -node_modules
+        -.bin
+            -_mocha
+            -mocha
+        -chai
+            -lib
+            -node_modules
+            
 
 where `generator.js` is the implementation  
 and `spec/generator-spec.js` is the test script
