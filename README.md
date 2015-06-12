@@ -29,27 +29,31 @@ File structure:
   - Scrambled-Number-Generator
     -js
         - challenge-solution.js
-        - test-spec.js
     -node_modules
         -.bin
-            -_mocha
-            -mocha
         -chai
-            -lib
-            -node_modules
-            
+        -mocha
+    -test
+        -generator-spec.js 
+    -.gitignore 
+    -package.json
+    -README.md
+
 
 where `generator.js` is the implementation  
-and `spec/generator-spec.js` is the test script
+and `test/generator-spec.js` is the test script
 
-(you'll need jasmine-node)
 
 ````
-npm install jasmine-node -g
+npm init
 ````
+````
+npm install -D mocha chai
+````
+
 
 run automated tests by running
 
 ````
-jasmine-node --autotest .
+mocha ./test -w
 ````
