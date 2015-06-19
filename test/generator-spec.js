@@ -1,7 +1,7 @@
 var chai = require('chai');
 var should = chai.should();
 
-var scrambled = require('../js/./challenge-solution.js');
+var scrambled = require('../js/./generator.js');
 
 describe('This is scrambled num generator', function () {
 
@@ -10,9 +10,9 @@ describe('This is scrambled num generator', function () {
   });
 
   it('should return false if parameter is not a number', function () {
-   scrambled.generate({}).should.be.equal(false);
-   scrambled.generate([]).should.be.equal(false);
-   scrambled.generate('string').should.be.equal(false);
+    scrambled.generate({}).should.be.equal(false);
+    scrambled.generate([]).should.be.equal(false);
+    scrambled.generate('string').should.be.equal(false);
   });
 
   it('should return an array', function () {
@@ -22,6 +22,4 @@ describe('This is scrambled num generator', function () {
   it('should have a length equal to number', function () {
     scrambled.generate(1000).length.should.be.equal(1000);
   });
-
-
 });
